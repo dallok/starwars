@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script
+			src="https://kit.fontawesome.com/bce1a98f73.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="style.css" />
+
+		<title>Star Wars Character Generator</title>
+	</head>
+	<body>
+		<div class="home__container active">
+			<h1>In Star Wars World,</h1>
+			<button id="btn__generate" class="btn">Who Am I?</button>
+		</div>
+
+		<div class="overlay__container">
+			<div class="char__container">
+				<button id="btn__back" class="btn"><i class="fas fa-home"></i></button>
+				<div class="content__container">
+					<img id="char__avatar" src="" width="200px" alt="" />
+					<div class="char__description">
+						<h1>You are <span id="char__name"></span></h1>
+						<h2>
+							A <span id="char__species"></span> from
+							<span id="char__homeworld"></span>
+						</h2>
+					</div>
+				</div>
+				<button id="btn__try" class="btn">Try Again</button>
+			</div>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>

@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: url('home-bg.png') no-repeat center/cover;
+	font-family: 'Roboto Mono', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	margin: 0;
+}
+
+.home__container {
+	display: none;
+	color: white;
+	text-align: center;
+}
+
+.home__container.active {
+	display: block;
+}
+
+.btn {
+	background-color: #f4eee8;
+	cursor: pointer;
+	border: 1px solid gray;
+	border-radius: 10px;
+	padding: 10px 30px;
+	font-family: inherit;
+	font-size: 20px;
+	color: #ce1212;
+	font-weight: bold;
+	box-shadow: 3px 3px 5px rgb(97, 96, 95);
+}
+
+.btn:focus {
+	outline: none;
+	transform: scale(1.1);
+	transition: transform 30ms;
+}
+
+#btn__generate {
+	margin-top: 30px;
+}
+
+.img__container {
+	display: none;
+	max-width: 250px;
+	max-height: 350px;
+	border-radius: 30%;
+}
+
+.img__container.visible {
+	display: block;
+}
+
+.overlay__container {
+	display: none;
+}
+
+.overlay__container.active {
+	display: block;
+}
+
+.char__container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.char__container #btn__back {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	padding: 5px 8px;
+	background-color: red;
+	color: white;
+}
+
+.char__container #btn__try {
+	margin-top: 30px;
+	font-size: 1rem;
+}
+
+.content__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 50px auto 60px;
+	color: white;
+}
+
+.content__container img {
+	max-width: 200px;
+	height: auto;
+	padding: 10px;
+}
+
+.char__description {
+	margin-left: 20px;
+	text-align: center;
+}
+
+canvas {
+	max-width: 250px;
+	height: auto;
+	text-align: center;
+}
+
+@media (max-width: 480px) {
+	.home__container {
+		max-width: 80%;
+		height: auto;
+	}
+
+	.content__container {
+		flex-direction: column;
+		margin: 0;
+	}
+
+	.char__description {
+		margin-left: 0;
+		font-size: smaller;
+	}
+}
