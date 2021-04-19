@@ -123,6 +123,10 @@ canvas {
 		margin: 0;
 	}
 
+	.content__container img {
+		border-radius: 20%;
+	}
+
 	.char__description {
 		margin-left: 0;
 		font-size: smaller;

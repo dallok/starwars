@@ -24,6 +24,7 @@ homeBtn.addEventListener('click', () => location.reload())
 
 tryBtn.addEventListener('click', () => {
   overlayContainer.classList.remove('active');
+  paintDisplay('', '', '', '')
   draw()
 })
 
@@ -51,7 +52,8 @@ function characterPick() {
       const charAvatar = `${data["image"]}`
       const charName = `${data["name"]}`;
       const charSpecies = `${data["species"]}`
-      const charHome = `${data["homeworld"]}`
+      let charHome = `${data["homeworld"]}`
+      charHome = charHome[0].toUpperCase() + charHome.substring(1)
       paintDisplay(charAvatar, charName, charSpecies, charHome);
     }
 	);
@@ -72,12 +74,12 @@ function draw() {
     } else {
       counter = 0;
     }
-	}, 30);
+	}, 20);
 
   setTimeout(() => {
     clearInterval(interval);
     characterPick();
     imgContainer.classList.toggle('visible')
     overlayContainer.classList.toggle("active")
-  }, 1000) 
+  }, 2000) 
 }
